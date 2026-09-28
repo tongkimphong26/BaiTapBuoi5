@@ -1,0 +1,46 @@
+﻿@model List<BuoiThu5.Models.Product>
+
+<h2>Danh sách sản phẩm</h2>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+    </tr>
+
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Name</td>
+            <td>@product.Price</td>
+        </tr>
+    }
+</table>
+
+<style>
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 600px;
+        text-align: left;
+    }
+
+    th, td {
+        border: 1px solid #555;
+        padding: 12px 20px;
+    }
+
+    th {
+        background-color: #333;
+        color: white;
+    }
+
+    tr:hover {
+        background-color: #333;
+    }
+</style>

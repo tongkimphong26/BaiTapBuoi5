@@ -1,0 +1,18 @@
+﻿@{
+    DateTime today = DateTime.Now;
+    bool isWeekend = today.DayOfWeek == DayOfWeek.Saturday
+                  || today.DayOfWeek == DayOfWeek.Sunday;
+}
+
+<h2>Kiểm tra cuối tuần</h2>
+
+<p>Hôm nay là: @today.ToString("dd/MM/yyyy")</p>
+
+@if (isWeekend)
+{
+    <p>Hôm nay là cuối tuần.</p>
+}
+else
+{
+    <p>Hôm nay không phải cuối tuần.</p>
+}
